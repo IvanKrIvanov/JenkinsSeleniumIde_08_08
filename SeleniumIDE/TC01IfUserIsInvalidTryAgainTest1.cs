@@ -21,6 +21,13 @@ public class TC01IfUserIsInvalidTryAgainTest
     [SetUp]
     public void SetUp()
     {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.AddArguments("headless");
+        chromeOptions.AddArguments("no-sandbox");
+        chromeOptions.AddArguments("disable-dev-shm-usage");
+        chromeOptions.AddArguments("disable-gpu");
+        chromeOptions.AddArguments("windows-size=1920x1082");
+
 		var options = new ChromeOptions();
 		options.AddArguments("--disable-search-engine-choice-screen");
 		options.AddArgument("--incognito");
